@@ -1,0 +1,88 @@
+node_modules
+yarn.lock
+ios/Pods
+.DS_Store
+ios/.DS_Store
+project.pbxproj
+# Android/IntelliJ
+#
+build/
+.idea
+.gradle
+local.properties
+*.iml
+android/app/.cxx/
+
+# Node modules
+node_modules/
+
+# Logs
+*.log
+yarn-debug.log*
+yarn-error.log*
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env files
+.env
+
+# Metro
+.expo/
+.expo-shared/
+
+# Watchman
+.watchmanconfig
+
+# Babel
+babel.config.js
+
+# Android
+android/.gradle/
+android/app/build/
+android/build/
+android/local.properties
+android/.idea/
+android/.cxx/
+android/captures/
+*.keystore
+build.gradle
+settings.gradle
+gradlew
+gradlew.bat
+android/app/
+android/gradle
+# iOS
+ios/Pods/
+ios/build/
+ios/DerivedData/
+*.xcuserstate
+*.xcworkspace
+*.xcuserdata/
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+
+# React Native
+*.jsbundle
+*.hmap
+*.lock
+*.pack
+
+# IDEs and editors
+.idea/
+.vscode/
+*.iml
+*.swp
+*.swo
+
+# Misc
+tmp/
+temp/
+*.tmp
+*.bak
+vendor/
+Gemfile
