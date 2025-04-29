@@ -50,8 +50,8 @@ const styles = StyleSheet.create({
         paddingHorizontal: wp('2%'),
     },
     offerCardWrapper: {
-        width: wp('80%'), // Fixed width for each offer card
-        marginRight: wp('4%'), // Space between cards
+        width: wp('80%'), 
+        marginRight: wp('4%'), 
     },
     offerCard: {
         width: '100%',

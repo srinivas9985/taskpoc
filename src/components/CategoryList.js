@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
     categoryCard: {
         alignItems: 'center',
         marginRight: wp(4),
-        minWidth: wp(22), // Ensures touchable area is big enough
+        minWidth: wp(22), 
     },
     categoryImage: {
         width: wp(20),

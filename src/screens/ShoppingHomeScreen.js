@@ -1,4 +1,3 @@
-// src/screens/ShoppingHomeScreen.js
 import React, { useRef } from 'react';
 import {
     Animated,

@@ -1,4 +1,3 @@
-// src/constants/contentTypes.js
 export const SECTION_TYPES = {
     BANNER: 'BANNER',
     CATEGORY_LIST: 'CATEGORY_LIST',
@@ -7,7 +6,6 @@ export const SECTION_TYPES = {
     DEAL_OF_DAY: 'DEAL_OF_DAY',
 };
 
-// Sample homepage configuration
 export const homePageSections = [
     {
         id: '1',
@@ -34,7 +32,7 @@ export const homePageSections = [
         type: SECTION_TYPES.DEAL_OF_DAY,
         title: 'Deal of the Day',
         data: {
-            endTime: new Date().getTime() + 24 * 60 * 60 * 1000, // 24 hours from now
+            endTime: new Date().getTime() + 24 * 60 * 60 * 1000, 
         },
     },
     {

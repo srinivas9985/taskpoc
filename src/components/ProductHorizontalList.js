@@ -1,4 +1,3 @@
-// src/components/ProductHorizontalList.js
 import React from 'react';
 import { View, FlatList, StyleSheet, Dimensions, Platform, Text } from 'react-native';
 import ProductCard from './ProductCard';

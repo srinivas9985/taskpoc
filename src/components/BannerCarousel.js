@@ -11,9 +11,9 @@ import {
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 
 const { width } = Dimensions.get('window');
-const ITEM_WIDTH = width * 0.99; // Slightly smaller than screen width
-const ITEM_HEIGHT = ITEM_WIDTH * 0.5; // Maintain Flipkart's aspect ratio
-const SPACING = width * 0.0; // Spacing between items
+const ITEM_WIDTH = width * 0.99; 
+const ITEM_HEIGHT = ITEM_WIDTH * 0.5; 
+const SPACING = width * 0.0; 
 const DOT_SIZE = 8;
 
 // Create Animated FlatList
@@ -40,7 +40,7 @@ const banners = [
         id: '5',
         image: 'https://img.freepik.com/free-vector/hand-drawn-electronics-store-facebook-template_23-2151138109.jpg?semt=ais_hybrid&w=740',
     },
-    // Add more banners as needed
+    
 ];
 
 export default function BannerCarousel() {

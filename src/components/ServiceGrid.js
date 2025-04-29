@@ -4,14 +4,14 @@ import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-nat
 
 const getGridColumns = () => {
     const { width } = Dimensions.get('window');
-    return width >= 768 ? 3 : 2; // More columns on larger screens
+    return width >= 768 ? 3 : 2; 
 };
 
 const getServiceWidth = () => {
     const { width } = Dimensions.get('window');
     const columns = getGridColumns();
-    const padding = wp('4%') * 2; // Total horizontal padding
-    const gap = wp('2%') * (columns - 1); // Total gap space
+    const padding = wp('4%') * 2; 
+    const gap = wp('2%') * (columns - 1); 
     return (width - padding - gap) / columns;
 };
 

@@ -1,4 +1,3 @@
-// src/components/ProductGrid.js
 import React from 'react';
 import { View, FlatList, StyleSheet, Dimensions } from 'react-native';
 import ProductCard from './ProductCard';

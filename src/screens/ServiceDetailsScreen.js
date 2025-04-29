@@ -164,9 +164,6 @@ export default function ServiceDetailsScreen({ route, navigation }) {
                 <TouchableOpacity style={styles.cartButton}>
                     <Text style={styles.cartButtonText}>Book Now</Text>
                 </TouchableOpacity>
-                {/* <TouchableOpacity style={styles.bookButton}>
-                    <Text style={styles.bookButtonText}>S</Text>
-                </TouchableOpacity> */}
             </View>
         </SafeAreaView>
     );
