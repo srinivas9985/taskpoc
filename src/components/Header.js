@@ -156,7 +156,7 @@ export default function Header({
 
                 {/* Cart Icon */}
                 <TouchableOpacity style={styles.cartButton} onPress={onCartPress}>
-                    <Icon name="shopping-cart" size={wp('6%')} color="#FFFFFF" />
+                    <Icon name="shopping-cart" size={isTablet ? wp('4%') : wp('6%')} color="#FFFFFF" />
                     {cartItemCount > 0 && (
                         <View style={styles.cartBadge}>
                             <Text style={styles.cartBadgeText}>
@@ -204,20 +204,20 @@ export default function Header({
 const styles = StyleSheet.create({
     container: {
         width: '100%',
-        // paddingTop: Platform.OS === 'ios' ? hp('5%') : hp('2%'),
-        paddingBottom: hp('1%'),
+        backgroundColor: '#7B3FE4',
         zIndex: 1000,
+        // paddingTop: Platform.OS === 'ios' ? 0 : hp('24%'),
     },
     headerMain: {
         flexDirection: 'row',
         alignItems: 'center',
         paddingHorizontal: wp('4%'),
-        height: hp('14%'),
-        paddingTop: isTablet ? hp('1%') : hp('4%'),
+        height: hp('8%'),
+        // paddingTop: Platform.OS === 'ios' ? hp('4%') : -hp('10%'),
     },
     logoContainer: {
-        width: wp('10%'),
-        height: wp('10%'),
+        width: isTablet ? wp('7%') : wp('10%'),
+        height: isTablet ? wp('7%') : wp('10%'),
         justifyContent: 'center',
         alignItems: 'center',
         overflow: 'hidden',
@@ -229,6 +229,7 @@ const styles = StyleSheet.create({
         borderRadius: wp('5%'),
     },
     searchContainer: {
+
         flex: 1,
         flexDirection: 'row',
         alignItems: 'center',
@@ -276,15 +277,15 @@ const styles = StyleSheet.create({
         right: 0,
         backgroundColor: '#FF4757',
         borderRadius: wp('2%'),
-        minWidth: wp('4%'),
-        height: wp('4%'),
+        minWidth: isTablet ? wp('3%') : wp('4%'),
+        height: isTablet ? wp('3%') : wp('4%'),
         justifyContent: 'center',
         alignItems: 'center',
         padding: 2,
     },
     cartBadgeText: {
         color: '#FFFFFF',
-        fontSize: wp('2.5%'),
+        fontSize: isTablet ? wp('2%') : wp('3%'),
         fontWeight: '600',
     },
     categoriesWrapper: {

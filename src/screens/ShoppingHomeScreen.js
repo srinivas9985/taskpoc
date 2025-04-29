@@ -6,17 +6,19 @@ import {
     Dimensions,
     View,
     StatusBar,
+    FlatList,
+    SafeAreaView,
 } from 'react-native';
 import Header from '../components/Header';
-import BannerCarousel from '../components/BannerCarousel';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 import SectionRenderer from '../constants/SectionRenderer';
 import { homePageSections } from '../constants/contentTypes';
 
 const { width } = Dimensions.get('window');
 const isTablet = width >= 768;
-const isSmallDevice = width < 375;
+
+// Create animated FlatList component
+const AnimatedFlatList = Animated.createAnimatedComponent(FlatList);
 
 export default function ShoppingHomeScreen({ navigation }) {
     const scrollY = useRef(new Animated.Value(0)).current;
@@ -28,8 +30,15 @@ export default function ShoppingHomeScreen({ navigation }) {
         }
     );
 
+    const renderItem = ({ item }) => (
+        <SectionRenderer
+            section={item}
+            navigation={navigation}
+        />
+    );
+
     return (
-        <SafeAreaProvider style={styles.container}>
+        <SafeAreaView style={styles.container}>
             <StatusBar backgroundColor="#7B3FE4" barStyle="light-content" />
 
             {/* Header */}
@@ -41,32 +50,27 @@ export default function ShoppingHomeScreen({ navigation }) {
             />
 
             {/* Main Content */}
-            <Animated.ScrollView
+            <AnimatedFlatList
+                data={homePageSections}
+                renderItem={renderItem}
+                keyExtractor={item => item.id}
                 style={styles.scrollView}
+                contentContainerStyle={[
+                    styles.contentContainer,
+                    isTablet && styles.contentContainerTablet
+                ]}
                 showsVerticalScrollIndicator={false}
-                scrollEventThrottle={16}
                 onScroll={handleScroll}
-            >
-                {/* <BannerCarousel /> */}
-
-                {homePageSections.map((section, index) => (
-                    <SectionRenderer
-                        key={index}
-                        section={section}
-                        navigation={navigation}
-                    />
-                ))}
-
-                <View style={{ height: hp('2%') }} />
-            </Animated.ScrollView>
-        </SafeAreaProvider>
+                scrollEventThrottle={16}
+            />
+        </SafeAreaView>
     );
 }
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#F1F3F6',
+        backgroundColor: '#7B3FE4',
     },
     header: {
         elevation: 4,
@@ -81,6 +85,12 @@ const styles = StyleSheet.create({
     scrollView: {
         flex: 1,
         backgroundColor: '#F1F3F6',
+    },
+    contentContainer: {
+        padding: 16,
+    },
+    contentContainerTablet: {
+        padding: 24,
     },
 });
 
