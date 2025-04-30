@@ -40,19 +40,19 @@ Thumbs.db
 babel.config.js
 
 # Android
-# android/.gradle/
-# android/app/build/
-# android/build/
+android/.gradle/
+android/app/build/
+android/build/
 android/local.properties
 android/.idea/
 android/.cxx/
 android/captures/
 *.keystore
-# build.gradle
-# settings.gradle
+build.gradle
+settings.gradle
 gradlew
 gradlew.bat
-# android/app/
+android/app/
 android/gradle
 # iOS
 ios/Pods/
