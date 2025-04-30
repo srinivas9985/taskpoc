@@ -5,7 +5,7 @@ import ShoppingHomeScreen from '../screens/ShoppingHomeScreen';
 import ProductDetailsScreen from '../screens/ProductDetailsScreen';
 import ServicesHomeScreen from '../screens/ServicesHomeScreen';
 import ServiceDetailsScreen from '../screens/ServiceDetailsScreen';
-import Icon from 'react-native-vector-icons/Ionicons';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -32,12 +32,12 @@ export default function MainNavigator() {
     return (
         <Tab.Navigator
             screenOptions={({ route }) => ({
-                tabBarIcon: ({ color, size }) => {
+                tabBarIcon: ({ focused, color, size }) => {
                     let iconName;
                     if (route.name === 'Home') {
-                        iconName = 'home-outline';
+                        iconName = 'home'  // MaterialIcons alternatives
                     } else if (route.name === 'Services') {
-                        iconName = 'construct-outline';
+                        iconName = 'build'
                     }
                     return <Icon name={iconName} size={size} color={color} />;
                 },
