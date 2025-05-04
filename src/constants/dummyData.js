@@ -9,11 +9,10 @@ export const categories = [
 ];
 
 export const products =
-
     [
         {
             "id": 1,
-            "title": "Essence Mascara Lash Princess",
+            "title": "asdasdas Mascara Lash Princess",
             "description": "The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects. Achieve dramatic lashes with this long-lasting and cruelty-free formula.",
             "category": "beauty",
             "price": 9.99,
@@ -24,7 +23,7 @@ export const products =
                 "beauty",
                 "mascara"
             ],
-            "brand": "Essence",
+            "brand": "1212eee",
             "sku": "RCH45Q1A",
             "weight": 2,
             "dimensions": {
@@ -66,10 +65,8 @@ export const products =
                 "barcode": "9164035109868",
                 "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
             },
-            "images": [
-                "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/1.png"
-            ],
-            "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/thumbnail.png"
+            "images": ["l1", "l2", "l3", "l4"],
+            "thumbnail": "l1"
         },
         {
             "id": 2,
@@ -126,10 +123,8 @@ export const products =
                 "barcode": "2817839095220",
                 "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
             },
-            "images": [
-                "https://cdn.dummyjson.com/products/images/beauty/Eyeshadow%20Palette%20with%20Mirror/1.png"
-            ],
-            "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Eyeshadow%20Palette%20with%20Mirror/thumbnail.png"
+            "images": ["l2", "l3", "l4"],
+            "thumbnail": "l2"
         },
         {
             "id": 3,
@@ -186,10 +181,8 @@ export const products =
                 "barcode": "0516267971277",
                 "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
             },
-            "images": [
-                "https://cdn.dummyjson.com/products/images/beauty/Powder%20Canister/1.png"
-            ],
-            "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Powder%20Canister/thumbnail.png"
+            "images": ["l3", "l4"],
+            "thumbnail": "l3"
         },
         {
             "id": 4,
@@ -246,10 +239,8 @@ export const products =
                 "barcode": "9444582199406",
                 "qrCode": "https://assets.dummyjson.com/public/qr-code.png"
             },
-            "images": [
-                "https://cdn.dummyjson.com/products/images/beauty/Red%20Lipstick/1.png"
-            ],
-            "thumbnail": "https://cdn.dummyjson.com/products/images/beauty/Red%20Lipstick/thumbnail.png"
+            "images": ["l4"],
+            "thumbnail": "l4"
         },
         {
             "id": 5,
@@ -931,9 +922,7 @@ export const products =
             ],
             "thumbnail": "https://cdn.dummyjson.com/products/images/furniture/Wooden%20Bathroom%20Sink%20With%20Mirror/thumbnail.png"
         },
-
     ]
-
 
 export const servicesCategories = [
     { id: '1', name: 'Food' },

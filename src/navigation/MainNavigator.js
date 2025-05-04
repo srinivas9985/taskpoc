@@ -1,11 +1,15 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
-import ShoppingHomeScreen from '../screens/ShoppingHomeScreen';
+// import ShoppingHomeScreen from '../screens/ShoppingHomeScreen';
 import ProductDetailsScreen from '../screens/ProductDetailsScreen';
 import ServicesHomeScreen from '../screens/ServicesHomeScreen';
 import ServiceDetailsScreen from '../screens/ServiceDetailsScreen';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import HomeScreen from '../screens/HomeScreen';
+// import ServicesScreen from '../screens/ServicesScreen';
+import BottomNavBar from '../components/BottomNavBar';
+import CartScreen from '../screens/CartScreen';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -13,8 +17,9 @@ const Stack = createStackNavigator();
 function ShoppingStack() {
     return (
         <Stack.Navigator screenOptions={{ headerShown: false }}>
-            <Stack.Screen name="ShoppingHome" component={ShoppingHomeScreen} />
+            <Stack.Screen name="HomeScreen" component={HomeScreen} />
             <Stack.Screen name="ProductDetails" component={ProductDetailsScreen} />
+            <Stack.Screen name="CartScreen" component={CartScreen} options={{ headerShown: false }} />
         </Stack.Navigator>
     );
 }
@@ -31,20 +36,8 @@ function ServicesStack() {
 export default function MainNavigator() {
     return (
         <Tab.Navigator
-            screenOptions={({ route }) => ({
-                tabBarIcon: ({ focused, color, size }) => {
-                    let iconName;
-                    if (route.name === 'Home') {
-                        iconName = 'home'  // MaterialIcons alternatives
-                    } else if (route.name === 'Services') {
-                        iconName = 'build'
-                    }
-                    return <Icon name={iconName} size={size} color={color} />;
-                },
-                headerShown: false,
-                tabBarActiveTintColor: '#ff6347',
-                tabBarInactiveTintColor: 'gray',
-            })}
+            tabBar={props => <BottomNavBar {...props} />}
+            screenOptions={{ headerShown: false }}
         >
             <Tab.Screen name="Home" component={ShoppingStack} />
             <Tab.Screen name="Services" component={ServicesStack} />

@@ -32,7 +32,7 @@ export const homePageSections = [
         type: SECTION_TYPES.DEAL_OF_DAY,
         title: 'Deal of the Day',
         data: {
-            endTime: new Date().getTime() + 24 * 60 * 60 * 1000, 
+            endTime: new Date().getTime() + 24 * 60 * 60 * 1000,
         },
     },
     {
@@ -42,7 +42,7 @@ export const homePageSections = [
         data: [
             {
                 "id": 1,
-                "title": "Essence Mascara Lash Princess",
+                "title": "dadaas Mascara Lash Princess",
                 "description": "The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects. Achieve dramatic lashes with this long-lasting and cruelty-free formula.",
                 "category": "beauty",
                 "price": 9.99,
